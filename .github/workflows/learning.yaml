@@ -1,0 +1,32 @@
+name: learning
+on: 
+  push: 
+    branches:
+      - main
+      - develop
+      - 'release/**'
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build step
+        run: echo "print the build steps"
+  test:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: testing phase
+        run: echo "print testing phase"
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: deployment phase
+        run: echo "deployment phase"
+  
+        
+      
