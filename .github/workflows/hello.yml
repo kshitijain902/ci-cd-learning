@@ -1,8 +1,12 @@
 name: hello
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+      - main
+      - "ci-cd/**"
 jobs:
   hello1:
     runs-on: ubuntu-latest
     steps:
       - name: Hello world
-        run: echo "Hello world"
+        run: echo "Hello ,${{vars.My_Name}}, Welcome to the world of DevOps"
