@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build step
-        run: echo "print the build steps"
+        run: echo "print , ${{vars.My_Name}} the build steps"
   test:
     runs-on: ubuntu-latest
     needs: build
