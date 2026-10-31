@@ -7,6 +7,18 @@ jobs:
     steps:
       - name: Build step
         run: echo "print the build steps"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing phase
+        run: echo "print testing phase"
 
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deployment phase
+        run: echo "deployment phase"
+        
+      - background: 
         
       
