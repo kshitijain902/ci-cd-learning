@@ -1,12 +1,11 @@
-name: hello
-on: 
-  push:
-    branches:
-      - main
-      - "feature/ci-cd**"
+name: Github workflow actions
+on: push
+  
 jobs:
-  hello1:
+  actions_demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Hello world
-        run: echo "Hello ,${{vars.My_Name}}, Welcome to the world of DevOps"
+      - name: Checkout the code
+        uses: actions/checkout@v4
+      - name: Print index.html file  and show
+        uses: cat index.html
