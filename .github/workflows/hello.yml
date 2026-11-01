@@ -5,7 +5,7 @@ jobs:
   actions_demo:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v4
-      - name: Print index.html file  and show
-        run: cat index.html
+      # - name: Checkout the code
+      #   uses: actions/checkout@v4
+      - name: Print index2.html file  and show
+        run: cat index2.html
